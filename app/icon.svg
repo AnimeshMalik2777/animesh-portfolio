@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="128" height="128" rx="28" fill="url(#bg-grad)" stroke="#06b6d4" stroke-opacity="0.3" stroke-width="3" />
+
+  <!-- Glowing subtle inner circle -->
+  <circle cx="64" cy="64" r="48" fill="none" stroke="#6366f1" stroke-opacity="0.15" stroke-width="2" stroke-dasharray="4 4" />
+
+  <!-- <A/> Glyph -->
+  <g filter="url(#glow)">
+    <!-- Left chevron < -->
+    <path d="M 38 48 L 26 64 L 38 80" fill="none" stroke="url(#neon-cyan)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Letter A -->
+    <path d="M 50 80 L 64 42 L 78 80" fill="none" stroke="url(#neon-cyan)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 54 68 L 74 68" fill="none" stroke="url(#neon-cyan)" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Right slash & chevron /> -->
+    <path d="M 88 48 L 100 64 L 88 80" fill="none" stroke="url(#neon-cyan)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Pulsing dot -->
+  <circle cx="64" cy="98" r="3.5" fill="#00f5ff" filter="url(#glow)" />
+</svg>
